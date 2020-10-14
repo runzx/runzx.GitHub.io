@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>REST API 服务接口开发规范 | 博思推广</title>
+    <meta name="description" content="The description of the site.">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/logo.png">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/css/0.styles.a56504de.css" as="style"><link rel="preload" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/app.c520abcc.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/2.98f30d17.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/10.d0fe15ee.js" as="script"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/11.10f964b7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/12.9f692495.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/3.5684b352.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/4.d6de901b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/5.8b42463c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/6.e01fb5a0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/7.d0c9006f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/8.712d13fe.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/9.d351bccc.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/css/0.styles.a56504de.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">博思推广</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Works" class="dropdown-title"><span class="title">Works</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/works/" class="nav-link router-link-active">
+  小程序规范
+</a></li><li class="dropdown-item"><!----> <a href="/works/restapi.html" class="nav-link router-link-exact-active router-link-active">
+  restApi规范
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Works" class="dropdown-title"><span class="title">Works</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/works/" class="nav-link router-link-active">
+  小程序规范
+</a></li><li class="dropdown-item"><!----> <a href="/works/restapi.html" class="nav-link router-link-exact-active router-link-active">
+  restApi规范
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>REST API 服务接口开发规范</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/works/restapi.html#目录规范" class="sidebar-link">目录规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/works/restapi.html#model-规范" class="sidebar-link">Model 规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/works/restapi.html#service-规范" class="sidebar-link">Service 规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/works/restapi.html#lib-规范" class="sidebar-link">Lib 规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/works/restapi.html#url-规范" class="sidebar-link">URL 规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/works/restapi.html#api-数据结构规范" class="sidebar-link">API 数据结构规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/works/restapi.html#设计原则" class="sidebar-link">设计原则</a></li><li class="sidebar-sub-header"><a href="/works/restapi.html#method" class="sidebar-link">Method</a></li><li class="sidebar-sub-header"><a href="/works/restapi.html#unifyresponse" class="sidebar-link">UnifyResponse</a></li><li class="sidebar-sub-header"><a href="/works/restapi.html#异常格式及编码意义" class="sidebar-link">异常格式及编码意义</a></li><li class="sidebar-sub-header"><a href="/works/restapi.html#分页格式" class="sidebar-link">分页格式</a></li><li class="sidebar-sub-header"><a href="/works/restapi.html#空数据-返回格式" class="sidebar-link">空数据 返回格式</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="rest-api-服务接口开发规范"><a href="#rest-api-服务接口开发规范" class="header-anchor">#</a> REST API 服务接口开发规范</h1> <h2 id="目录规范"><a href="#目录规范" class="header-anchor">#</a> 目录规范</h2> <div class="language- extra-class"><pre class="language-text"><code>├── app               # 业务代码
+│   ├── api           RestApi
+│   │   ├── cms       /cms      CMS接口
+│   │   ├── v1        /api/v1   v1版api接口
+│   │   ├── v2        /api/v2   v2版api接口
+│   │   └── apijson   /apijson  统一api接口
+│   │
+│   ├── extensions    扩展库
+│   │
+│   ├── lib           Lib库
+│   │
+│   ├── models        Model库
+│   │
+│   └── services      Service库
+│
+├── assets            # 静态资源
+│
+├── config            # 配置文件
+│
+├── core              # 平台核心库
+│
+└── app.js            # 主入口
+
+</code></pre></div><h2 id="model-规范"><a href="#model-规范" class="header-anchor">#</a> Model 规范</h2> <p>模型以大写字母开头</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> User<span class="token punctuation">,</span> Product <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../models'</span><span class="token punctuation">)</span>
+</code></pre></div><p>只涉及本模型(集合、表)内数据处理的方法都放到模型内,以静态方法实现</p> <div class="language-js extra-class"><pre class="language-js"><code>userSchema<span class="token punctuation">.</span>statics <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token parameter">username<span class="token punctuation">,</span> password</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="service-规范"><a href="#service-规范" class="header-anchor">#</a> Service 规范</h2> <p>服务以大写字母开头</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> UserToken<span class="token punctuation">,</span> ProductService <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../services'</span><span class="token punctuation">)</span>
+</code></pre></div><p>与多个模型(集合、表)数据相关处理的方法都放到服务内,以对象定义，静态方法或实例方法实现</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">MpService</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> appId<span class="token punctuation">,</span> secret<span class="token punctuation">,</span> <span class="token operator">...</span>conf <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>appId <span class="token operator">=</span> appId
+    <span class="token keyword">this</span><span class="token punctuation">.</span>secret <span class="token operator">=</span> secret
+    <span class="token keyword">this</span><span class="token punctuation">.</span>conf <span class="token operator">=</span> conf
+  <span class="token punctuation">}</span>
+  <span class="token comment">/**
+   * 从缓存中取accessToken,如没有则从微信取并存入缓存
+   * @param {string} appId
+   * @param {string} secret
+   */</span>
+  <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">getAccessToken</span><span class="token punctuation">(</span><span class="token parameter">appId<span class="token punctuation">,</span> secret</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token keyword">await</span> cache<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>appId<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token keyword">return</span> res
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> accessToken<span class="token punctuation">,</span> expiresIn <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getAccessToken</span><span class="token punctuation">(</span>appId<span class="token punctuation">,</span> secret<span class="token punctuation">)</span>
+    <span class="token keyword">await</span> cache<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>appId<span class="token punctuation">,</span> accessToken<span class="token punctuation">,</span> expiresIn<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> accessToken
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="lib-规范"><a href="#lib-规范" class="header-anchor">#</a> Lib 规范</h2> <ol><li>保存 lib/ 目录下</li> <li>与业务无关</li></ol> <h2 id="url-规范"><a href="#url-规范" class="header-anchor">#</a> URL 规范</h2> <ol><li>全小写</li> <li>'-'联接</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">/</span>api<span class="token operator">/</span>v1<span class="token operator">/</span>spu<span class="token operator">/</span>by<span class="token operator">-</span>id
+<span class="token operator">/</span>api<span class="token operator">/</span>v1<span class="token operator">/</span>user<span class="token operator">/</span>id<span class="token operator">/</span><span class="token operator">:</span>id   <span class="token comment">// 通过id取user数据</span>
+<span class="token operator">/</span>api<span class="token operator">/</span>v1<span class="token operator">/</span>user<span class="token operator">/</span>page     <span class="token comment">// 通过分页取 user列表</span>
+</code></pre></div><h2 id="api-数据结构规范"><a href="#api-数据结构规范" class="header-anchor">#</a> API 数据结构规范</h2> <h3 id="设计原则"><a href="#设计原则" class="header-anchor">#</a> 设计原则</h3> <ol><li>尽可能一次请求满足前端数据需求</li></ol> <h3 id="method"><a href="#method" class="header-anchor">#</a> Method</h3> <table><thead><tr><th>HTTP Method</th> <th style="text-align:center;">CRUD</th></tr></thead> <tbody><tr><td>GET</td> <td style="text-align:center;">取</td></tr> <tr><td>POST</td> <td style="text-align:center;">新增</td></tr> <tr><td>PUT</td> <td style="text-align:center;">更新</td></tr> <tr><td>DELETE</td> <td style="text-align:center;">删除</td></tr></tbody></table> <h3 id="unifyresponse"><a href="#unifyresponse" class="header-anchor">#</a> UnifyResponse</h3> <ol><li>统一 JSON 格式</li> <li>更新数据的 api,不返回新记录数据，返回:</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>result <span class="token operator">=</span> <span class="token punctuation">{</span>
+  code<span class="token punctuation">,</span> <span class="token comment">// 0 成功</span>
+  message<span class="token punctuation">,</span>
+  request <span class="token comment">// 'POST /api/v1/spu'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="异常格式及编码意义"><a href="#异常格式及编码意义" class="header-anchor">#</a> 异常格式及编码意义</h3> <ol><li><p>code:</p> <table><thead><tr><th>code</th> <th style="text-align:center;">状态</th></tr></thead> <tbody><tr><td>0-9998</td> <td style="text-align:center;">正常</td></tr> <tr><td>9999</td> <td style="text-align:center;">未知服务器异常</td></tr> <tr><td>10000+</td> <td style="text-align:center;">业务异常</td></tr></tbody></table></li> <li><p>Http 状态码:</p> <table><thead><tr><th>statusCode</th> <th style="text-align:center;">状态</th></tr></thead> <tbody><tr><td>200</td> <td style="text-align:center;">成功</td></tr> <tr><td>201</td> <td style="text-align:center;">创建成功</td></tr> <tr><td>401</td> <td style="text-align:center;">未登录</td></tr> <tr><td>403</td> <td style="text-align:center;">未授权</td></tr> <tr><td>404</td> <td style="text-align:center;">未找到</td></tr> <tr><td>500</td> <td style="text-align:center;">服务器异常</td></tr></tbody></table></li></ol> <h3 id="分页格式"><a href="#分页格式" class="header-anchor">#</a> 分页格式</h3> <ol><li>返回数据格式</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>result <span class="token operator">=</span> <span class="token punctuation">{</span>
+  total<span class="token punctuation">,</span>
+  page<span class="token punctuation">,</span> <span class="token comment">// 1 开始</span>
+  pageSize<span class="token punctuation">,</span> <span class="token comment">// count</span>
+  totalPage<span class="token punctuation">,</span> <span class="token comment">// 可以不返回</span>
+  items <span class="token comment">// []</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li>请求数据格式：</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  page<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token comment">// 第几页，开始页1</span>
+  pageSize<span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token comment">// 每页记录数，默认15</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="空数据-返回格式"><a href="#空数据-返回格式" class="header-anchor">#</a> 空数据 返回格式</h3> <ol><li>单体对象 如 spu</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// statusCode:404 + UnifyResponse</span>
+result <span class="token operator">=</span> <span class="token punctuation">{</span>
+  code<span class="token operator">:</span> <span class="token number">60001</span><span class="token punctuation">,</span>
+  message<span class="token operator">:</span> <span class="token string">'spu未找到'</span><span class="token punctuation">,</span>
+  request<span class="token operator">:</span> <span class="token string">'GET /api/v1/spu'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li>不分页 数组</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// statusCode:200 + []</span>
+result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+</code></pre></div><ol start="3"><li>分页</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// statusCode:200 +</span>
+result <span class="token operator">=</span> <span class="token punctuation">{</span>
+  total<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  items<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// 下面可省略</span>
+  page<span class="token punctuation">,</span>
+  pageSize<span class="token punctuation">,</span>
+  totalPage
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/app.c520abcc.js" defer></script><script src="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/2.98f30d17.js" defer></script><script src="https://cdn.jsdelivr.net/gh/runzx/runzx.github.io/assets/js/10.d0fe15ee.js" defer></script>
+  </body>
+</html>
